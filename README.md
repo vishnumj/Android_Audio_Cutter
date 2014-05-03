@@ -16,23 +16,11 @@ USUAGE :
 
 CheapSoundFile cheapSoundFile = CheapSoundFile.create(in_file_path,listner);
 
+int startFrame = Utilities.secondsToFrames(5.0,mSampleRate, mSamplesPerFrame);
 
-// START FRAME FOR 5 SECONDS
+int endFrame = Utilities.secondsToFrames(30.0, mSampleRate,mSamplesPerFrame);
 
-int startFrame = Utilities.secondsToFrames(5.0,
-
-							mSampleRate, mSamplesPerFrame);
-// END FRAME OF 30 SECONDS
-
-int endFrame = Utilities.secondsToFrames(30.0, mSampleRate,
-							mSamplesPerFrame);
-
-
-
-// WRITES THE TRIMMED AUDIO FILE OF 5-30 SECONDS OF THE ORIGINAL AUDIO FILE
-
-cheapSoundFile.WriteFile(outfile_path, startFrame, endFrame
-							- startFrame);
+cheapSoundFile.WriteFile(outfile_path, startFrame, endFrame-startFrame);
 
 final CheapSoundFile.ProgressListener listener = new CheapSoundFile.ProgressListener() {
 		public boolean reportProgress(double frac) {
