@@ -14,15 +14,15 @@ It works with AAC / MP3 / WAV / AMR
 
 USUAGE :
 
-CheapSoundFile cheapSoundFile = CheapSoundFile.create(in_file_path,listner);
+	CheapSoundFile cheapSoundFile = CheapSoundFile.create(in_file_path,listner);
 
-int startFrame = Utilities.secondsToFrames(5.0,mSampleRate, mSamplesPerFrame);
+	int startFrame = Utilities.secondsToFrames(5.0,mSampleRate, mSamplesPerFrame);
 
-int endFrame = Utilities.secondsToFrames(30.0, mSampleRate,mSamplesPerFrame);
+	int endFrame = Utilities.secondsToFrames(30.0, mSampleRate,mSamplesPerFrame);
 
-cheapSoundFile.WriteFile(outfile_path, startFrame, endFrame-startFrame);
+	cheapSoundFile.WriteFile(outfile_path, startFrame, endFrame-startFrame);
 
-final CheapSoundFile.ProgressListener listener = new CheapSoundFile.ProgressListener() {
+	final CheapSoundFile.ProgressListener listener = new CheapSoundFile.ProgressListener() {
 		public boolean reportProgress(double frac) {
 		
 		return true; 
