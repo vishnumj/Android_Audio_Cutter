@@ -12,7 +12,7 @@ So with the help of RingDroid i made a library that just get the job done.
 It works with AAC / MP3 / WAV / AMR
 
 
-USUAGE :
+USAGE :
 
 	CheapSoundFile cheapSoundFile = CheapSoundFile.create(in_file_path,listner);
 
