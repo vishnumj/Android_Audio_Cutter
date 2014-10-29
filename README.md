@@ -14,7 +14,13 @@ It works with AAC / MP3 / WAV / AMR
 
 USAGE :
 
+
+
 	CheapSoundFile cheapSoundFile = CheapSoundFile.create(in_file_path,listner);
+
+	int mSampleRate = cheapSoundFile.getSampleRate();
+
+	int mSamplesPerFrame = cheapSoundFile.getSamplesPerFrame();
 
 	int startFrame = Utilities.secondsToFrames(5.0,mSampleRate, mSamplesPerFrame);
 
